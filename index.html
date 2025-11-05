@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
+    <!-- Primary layout wrapper keeps vertical rhythm consistent across the page -->
     <div class="page-shell">
+      <!-- Sticky header with navigation and brand link -->
       <header class="site-header" id="top">
         <a class="brand" href="#top">
           <span class="brand-mark">AA</span>
@@ -33,13 +35,14 @@
       </header>
 
       <main>
+        <!-- Hero: snapshot of role, mission, and quick stats -->
         <section class="hero">
           <div class="hero-copy">
-            <p class="eyebrow">Data & AI Engineer & Emerging Founder</p>
-            <h1>Designing data-driven products that elevate human impact.</h1>
+            <p class="eyebrow">Data & AI Engineer | Emerging Founder</p>
+            <h1>Designing data-driven products that make a real impact.</h1>
             <p class="lede">
-              I'm a digital design and development student blending technical depth with entrepreneurial drive.
-              From ideation to launch, I build thoughtful experiences that solve real-world problems and inspire change.
+              I’m a digital design and development student who mixes technical skill with entrepreneurial curiosity.
+              From idea to launch, I build practical, people-focused tools that solve real problems and leave things better than I found them.
             </p>
 
             <div class="hero-meta">
@@ -55,26 +58,27 @@
           </div>
         </section>
 
+        <!-- About: values, motivation, and personal highlights -->
         <section id="about" class="panel">
           <div class="section-heading">
             <p class="eyebrow">About</p>
             <h2>Purpose-led technologist</h2>
           </div>
           <p>
-            Driven to harness AI, machine learning, 
-            and data science to deliver measurable, lasting impact. 
-            Experienced in project delivery, digital strategy, and technical leadership,
-            blending analytical thinking with creativity and execution.
+            Driven to use AI, machine learning, and data science to create real, lasting change.
+            I’ve worked on projects that blend data, strategy, and design thinking — turning ideas into results people can actually use.
+            Strong in problem-solving and collaboration, I care about building tools that make a difference, not just meet specs.
           </p>
           <ul class="bio-highlights">
-            <li>Apply Python, JavaScript, and data analytics to extract insights and build intelligent solutions.</li>
-            <li>Balance T-level studies with data-centric freelance projects and hackathons.</li>
-            <li>Passionate about AI for social impact, focusing on decision systems and inclusive product design.</li>
-            <li>Advocate for mental wellness, creativity, and community-led innovation.</li>
-            <li>Motivated by curiosity, experimentation, and continuous learning.</li>
+            <li>Use Python, JavaScript, and data analytics to find patterns and build smarter, more useful tools.</li>
+            <li>Juggle T-Level studies with freelance projects and hackathons that put data to work in real situations.</li>
+            <li>Care about AI for social impact, especially fair decision systems and inclusive digital design.</li>
+            <li>Support mental wellness, creativity, and projects that grow from community ideas.</li>
+            <li>Stay motivated by curiosity, trying new things, and learning as I build.</li>
           </ul>
         </section>
 
+        <!-- Education: spotlight on current academic programme -->
         <section id="education" class="panel">
           <div class="section-heading">
             <p class="eyebrow">Education</p>
@@ -91,6 +95,7 @@
           </a>
         </section>
 
+        <!-- Skills: grouped capabilities with quick-scan pill list -->
         <section id="skills" class="panel">
           <div class="section-heading">
             <p class="eyebrow">Skills &amp; Technologies</p>
@@ -116,16 +121,36 @@
             <article class="skills-card">
               <div class="skills-card-header">
                 <span class="marker marker-backend"></span>
-                <h3>Data &amp; Backend</h3>
+                <h3>Backend</h3>
               </div>
               <div class="pill-group">
                 <span>Python</span>
                 <span>SQL</span>
-                <span>JupyterLab</span>
+                <span>MatPlotLib</span>
+              </div>
+            </article>
+
+            <article class="skills-card">
+              <div class="skills-card-header">
+                <span class="marker marker-frontend"></span>
+                <h3>Machine Learning</h3>
+              </div>
+              <div class="pill-group">
+                <span>Scikit-learn</span>
                 <span>TensorFlow</span>
+                <span>Keras</span>
+                <span>JupyterLab</span>
+              </div>
+            </article>
+
+            <article class="skills-card">
+              <div class="skills-card-header">
+                <span class="marker marker-frontend"></span>
+                <h3>Data Analysis and Visualisation</h3>
+              </div>
+              <div class="pill-group">
                 <span>NumPy</span>
                 <span>Pandas</span>
-                <span>MatPlotLib</span>
               </div>
             </article>
 
@@ -144,6 +169,7 @@
           </div>
         </section>
 
+        <!-- Projects: recent case studies with context and links -->
         <section id="projects" class="panel">
           <div class="section-heading">
             <p class="eyebrow">Projects</p>
@@ -162,9 +188,9 @@
                   <span class="project-period">Oct 2025</span>
                 </div>
                 <p>
-                  Explored how vaccination changes disease dynamics using the SIRV mathematical model. 
-                  Applied differential equations to track transitions between population states, analysed infection curves, and visualised outcomes with real-world parameter tuning.
-                  Focused on data interpretation and insight generation rather than prediction.
+                  Explored how vaccination affects disease spread using an SIRV mathematical model.
+                  Used differential equations to map how people move between health states and analysed infection trends under different conditions.
+                  Focused on understanding data and drawing insights from real-world parameters instead of just chasing predictions.
                 </p>
                 <div class="pill-group project-stack">
                   <span>Python</span>
@@ -209,6 +235,7 @@
         </section>
       </main>
 
+      <!-- Footer: contact links and closing message -->
       <footer class="site-footer">
         <p>Let's build something meaningful together.</p>
         <div class="footer-links">
@@ -228,6 +255,7 @@
       </footer>
     </div>
     <script>
+      // Immediately invoked function handles scroll restoration and auto-hiding header behavior
       (() => {
         const siteHeader = document.querySelector('.site-header');
         if (!siteHeader) {

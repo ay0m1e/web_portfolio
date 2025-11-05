@@ -227,5 +227,59 @@
         </div>
       </footer>
     </div>
+    <script>
+      (() => {
+        const siteHeader = document.querySelector('.site-header');
+        if (!siteHeader) {
+          return;
+        }
+
+        if ('scrollRestoration' in window.history) {
+          window.history.scrollRestoration = 'manual';
+        }
+        window.requestAnimationFrame(() => {
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        });
+
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+        let hideTimeout;
+        const inactivityDelay = 3000;
+
+        const scheduleAutoHide = () => {
+          clearTimeout(hideTimeout);
+          hideTimeout = setTimeout(() => {
+            if (window.scrollY > 80) {
+              siteHeader.classList.add('is-hidden');
+            }
+          }, inactivityDelay);
+        };
+
+        const handleScroll = () => {
+          const currentScroll = window.scrollY;
+          const isScrollingDown = currentScroll > lastScrollY;
+          const hasScrolledPastHero = currentScroll > 80;
+
+          if (isScrollingDown && hasScrolledPastHero) {
+            siteHeader.classList.add('is-hidden');
+          } else {
+            siteHeader.classList.remove('is-hidden');
+          }
+
+          lastScrollY = currentScroll;
+          scheduleAutoHide();
+          ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            window.requestAnimationFrame(handleScroll);
+            ticking = true;
+          }
+        });
+
+        scheduleAutoHide();
+      })();
+    </script>
   </body>
 </html>

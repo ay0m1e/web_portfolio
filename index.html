@@ -234,12 +234,24 @@
           return;
         }
 
+        const resetScroll = () => {
+          window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        };
+
         if ('scrollRestoration' in window.history) {
           window.history.scrollRestoration = 'manual';
         }
-        window.requestAnimationFrame(() => {
-          window.scrollTo({ top: 0, behavior: 'auto' });
+
+        window.addEventListener('load', resetScroll);
+        window.addEventListener('pageshow', (event) => {
+          if (event.persisted) {
+            resetScroll();
+          }
         });
+
+        resetScroll();
 
         let lastScrollY = window.scrollY;
         let ticking = false;

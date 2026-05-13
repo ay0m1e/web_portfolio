@@ -6,7 +6,7 @@ import cvIcon from '../assets/icons/file-text.svg';
 function SiteFooter() {
   return (
     <footer className="site-footer" data-reveal>
-      <p>Let&apos;s build something meaningful together.</p>
+      <p>Let&apos;s build something worth building.</p>
       <div className="footer-links">
         <a href="https://github.com/ay0m1e" target="_blank" rel="noopener" title="GitHub">
           <img src={githubIcon} alt="GitHub" />

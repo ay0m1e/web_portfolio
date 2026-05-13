@@ -28,9 +28,9 @@ function ProjectsSection() {
     <section id="projects" className="panel">
       <div className="section-heading" data-reveal>
         <p className="eyebrow">Projects</p>
-        <h2>Recent work</h2>
+        <h2>Selected Work</h2>
         <p className="section-subtitle">
-          Selected builds that showcase product sense, craft, and execution.
+          Technical builds across data systems, AI integration and product engineering.
         </p>
       </div>
 
@@ -56,11 +56,12 @@ function ProjectsSection() {
               <span className="project-period">Oct 2025</span>
             </div>
             <p>
-              Explored how vaccination affects disease spread using an SIRV mathematical model.
-              Used differential equations to map how people move between health states and
-              analysed infection trends under different conditions. Focused on understanding
-              data and drawing insights from real-world parameters instead of just chasing
-              predictions.
+              Built a differential equation simulation engine to model SIRV epidemic
+              dynamics from scratch. Implemented numerical integration using NumPy to
+              track population transitions across Susceptible, Infected, Recovered and
+              Vaccinated states. Analysed how variable vaccination rates and transmission
+              parameters affect infection curves, producing visualisations that surface
+              non-obvious threshold behaviours in herd immunity modelling.
             </p>
             <div className="pill-group project-stack">
               {projectStacks.sirv.map((item) => (
@@ -84,11 +85,15 @@ function ProjectsSection() {
           <div className="project-body">
             <div className="project-meta">
               <h3>ARX</h3>
-              <span className="project-period">Oct 2024 - Mar 2025</span>
+              <span className="project-period">Oct 2024 – Mar 2025</span>
             </div>
             <p>
-              Built a digital platform supporting young women against domestic violence,
-              combining research-driven insights with thoughtful UX flows.
+              Designed and built a full production web platform supporting young women
+              affected by domestic violence. Engineered the complete frontend architecture
+              with structured UX flows, accessible design patterns and responsive layout.
+              Integrated real-world research into product decisions to ensure the tool
+              addressed genuine user needs, not just technical requirements. Deployed
+              and maintained as a live production site.
             </p>
             <div className="pill-group project-stack">
               {projectStacks.arx.map((item) => (

@@ -1,6 +1,6 @@
 import avatarImage from '../assets/images/Avatar.png';
 
-const HEADLINE = 'Designing data-driven products that make a real impact.';
+const HEADLINE = 'Building intelligent systems that turn data into decisions.';
 
 function WordRevealH1({ text }) {
   const words = text.split(' ');
@@ -14,7 +14,7 @@ function WordRevealH1({ text }) {
           >
             {word}
           </span>
-          {i < words.length - 1 ? ' ' : ''}
+          {i < words.length - 1 ? ' ' : ''}
         </span>
       ))}
     </>
@@ -26,7 +26,7 @@ function HeroSection() {
     <section className="hero">
       <div className="hero-copy">
         <p className="eyebrow hero-meta-item" style={{ '--meta-delay': '0s' }}>
-          Data &amp; AI Engineer | Emerging Founder
+          AI &amp; Data Systems Engineer · Emerging Founder
         </p>
 
         <h1>
@@ -34,9 +34,9 @@ function HeroSection() {
         </h1>
 
         <p className="lede hero-meta-item" style={{ '--meta-delay': '1.1s' }}>
-          I&apos;m a digital design and development student who mixes technical skill with
-          entrepreneurial curiosity. From idea to launch, I build practical, people-focused
-          tools that solve real problems and leave things better than I found them.
+          I&apos;m Ayomide, an 18-year-old engineer based in London building AI-integrated
+          tools, data pipelines and backend systems. I work across the full stack from
+          model to product, with a long-term focus on infrastructure and founding.
         </p>
 
         <div className="hero-meta">
@@ -46,10 +46,13 @@ function HeroSection() {
           <span className="tag hero-meta-item" style={{ '--meta-delay': '1.36s' }}>
             8+ shipped projects
           </span>
+          <span className="tag hero-meta-item" style={{ '--meta-delay': '1.47s' }}>
+            Open to opportunities
+          </span>
           <a
             className="primary-btn primary-btn--shimmer hero-meta-item"
             href="#projects"
-            style={{ '--meta-delay': '1.48s' }}
+            style={{ '--meta-delay': '1.58s' }}
           >
             View my work
           </a>

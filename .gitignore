@@ -1,0 +1,20 @@
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules
+
+# Production build output
+dist
+
+# Local env files
+.env
+.env.*
+
+# IDE artifacts
+.DS_Store
+*.swp
+.vscode/

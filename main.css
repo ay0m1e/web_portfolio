@@ -25,7 +25,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   color: var(--text-primary);
-  background: url("images/portfolio-background.jpg") center/cover fixed no-repeat;
+  background: #0b1120;
   min-height: 100vh;
   position: relative;
 }
@@ -589,5 +589,56 @@ h3 {
 
   .footer-links {
     flex-wrap: wrap;
+  }
+}
+
+/* Subtle, GPU-friendly moving starfield behind all content */
+.space-background {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-color: transparent;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.9), transparent 55%),
+    radial-gradient(1px 1px at 60% 80%, rgba(255, 255, 255, 0.7), transparent 55%),
+    radial-gradient(1px 1px at 80% 40%, rgba(125, 211, 252, 0.55), transparent 60%);
+  background-size: 720px 720px, 880px 880px, 640px 640px;
+  mix-blend-mode: screen;
+  transform: translateZ(0);
+  animation: driftStarsA 38s linear infinite;
+  opacity: 0.9;
+}
+
+.space-background::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 25% 15%, rgba(255, 255, 255, 0.8), transparent 55%),
+    radial-gradient(1px 1px at 75% 65%, rgba(255, 255, 255, 0.65), transparent 55%),
+    radial-gradient(1px 1px at 45% 55%, rgba(125, 211, 252, 0.5), transparent 60%);
+  background-size: 900px 900px, 1020px 1020px, 760px 760px;
+  mix-blend-mode: screen;
+  transform: translateZ(0);
+  animation: driftStarsB 52s linear infinite;
+  opacity: 0.85;
+}
+
+@keyframes driftStarsA {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-6%, -8%, 0);
+  }
+}
+
+@keyframes driftStarsB {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(7%, 10%, 0);
   }
 }
